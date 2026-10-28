@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veloura — fashion, accessories, beauty and everyday essentials.">
+  <title>Veloura | Your Style, Your World</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">A little luxury for every day ✦ Welcome to Veloura</div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Veloura home">VELOURA<span>✦</span></a>
+    <p class="tagline">YOUR STYLE. YOUR WORLD. YOUR ESSENTIAL.</p>
+    <div class="header-actions">
+      <label class="search-wrap">
+        <span class="sr-only">Search products</span>
+        <input id="searchInput" type="search" placeholder="Search your essentials...">
+      </label>
+      <button class="icon-button" id="wishlistToggle" type="button" aria-label="Show wishlist">♡ <span id="wishlistCount">0</span></button>
+      <button class="icon-button cart-button" id="cartToggle" type="button" aria-label="Open shopping bag">Bag (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Product categories">
+    <button class="nav-link active" data-category="All">All</button>
+    <button class="nav-link" data-category="Fashion">Fashion</button>
+    <button class="nav-link" data-category="Accessories">Accessories</button>
+    <button class="nav-link" data-category="Beauty">Beauty</button>
+    <button class="nav-link" data-category="Lifestyle">Lifestyle</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE EVERYDAY LUXE EDIT</p>
+        <h1>Your style.<br><em>Your world.</em></h1>
+        <p class="hero-text">Discover the little things that make your world feel more like you — from fashion finds to everyday essentials.</p>
+        <a class="primary-button" href="#shop">EXPLORE THE COLLECTION <span>↗</span></a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Elegant fashion accessories arranged on a neutral background">
+        <div class="hero-stamp">CURATED<br>WITH LOVE <span>✦</span></div>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <span>✦ THOUGHTFULLY PICKED</span><span>✦ EVERYDAY ESSENTIALS</span><span>✦ A TOUCH OF ELEGANCE</span>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR NEXT FAVOURITE</p><h2>Shop the edit</h2></div>
+        <p>Find something that feels like you.</p>
+      </div>
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+      <p id="emptyMessage" class="empty-message" hidden>No items found. Try another search or category.</p>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="eyebrow">LETTERS FROM VELOURA</p><h2>A little note of lovely.</h2><p>Get updates on new finds, style inspiration and special offers.</p></div>
+      <form id="newsletterForm"><label class="sr-only" for="emailInput">Email address</label><input id="emailInput" type="email" placeholder="Your email address" required><button class="primary-button" type="submit">SIGN ME UP</button></form>
+      <p id="newsletterMessage" class="form-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#">VELOURA<span>✦</span></a>
+    <p>Your style, your world, your essential. Everything you love in one place.</p>
+    <small>© <span id="year"></span> Veloura. Demo website for a student project.</small>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer-heading"><h2 id="drawerTitle">Your bag</h2><button id="closeDrawer" class="close-button" aria-label="Close bag">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-total"><span>Subtotal</span><strong id="cartTotal">₦0</strong></div>
+    <button id="checkoutButton" class="primary-button checkout-button" type="button">CONTINUE TO CHECKOUT</button>
+    <p class="demo-note">Demo only: checkout does not take payments or place real orders.</p>
+  </aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
